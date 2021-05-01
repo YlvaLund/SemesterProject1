@@ -13,28 +13,65 @@
     <header>
       <nav>
         <a href="../index.html"><img src="../img/logo.svg" alt="museum logo" /></a>
-        <div class="grid">
+        <div>
           <p>Community Science Museum</p>
           <p>"Explore together"</p>
         </div>
-        <form>
-          <input type="text" />
-          <input type="submit" />
-        </form>
-        <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
-        <input type="checkbox" id="hamburger-menu" />
+        <label for="hamburger-menu"><i class="fas fa-bars"></i> </label><input type="checkbox" id="hamburger-menu" checked="true" />
 
-        <ul>
+        <ul id="menuList">
           <li><a href="../index.html">Home</a></li>
           <li><a href="visit.html">Visit</a></li>
           <li><a href="explore.html">Explore</a></li>
           <li><a href="getinvolved.html">Get Involved</a></li>
           <li><a href="exhibitionspaces.html">Exhibition Spaces</a></li>
           <li><a href="specialevents.html">Special Events and Exhibitions</a></li>
+          <form action="../index.html" method="GET">
+            <input type="text" name="search" placeholder="Search" /><button type="submit"><i class="fas fa-search"></i></button>
+          </form>
+          <img src="../img/logo.svg" alt="museum logo" />
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <article class="goldenratio">
+        <h2>Location and accessibility</h2>
+        <img src="../img/Skjermbilde.PNG" alt="test" />
+        <p>The museum is located at Larvikstreet x. The museum has wheelchair accessibility ramps. It also has audio guides and braille display signs for the visually impaired.</p>
+      </article>
+      <article class="goldenratio">
+        <h2>Admission</h2>
+        <img src="../img/admission.jpg" alt="test" />
+        <p>
+          The entrance is free for all. There are guided tours of the museum that leave every hour. These tours are 70 NOK per person and include a handy printed guide of the museum. If you would like to organise a guided tour for your Group of 6 or more people, please contact us to arrange the
+          tour.
+        </p>
+      </article>
+      <article class="goldenratio">
+        <h2>Hours</h2>
+        <img src="../img/hours.jpg" alt="test" />
+
+        <p class="grid">
+          <span>Monday: Closed</span>
+          <span>Tuesday: 10:00 – 16:00</span>
+          <span>Wednesday: 10:00 – 16:00</span>
+          <span>Thursday: 10:00 – 16:00</span>
+          <span>Friday: 10:00 – 19:00</span>
+          <span>Saturday: 9:00 – 16:00</span>
+          <span>Sunday: 9:00 – 13:00</span>
+        </p>
+      </article>
+      <article class="goldenratio">
+        <img src="../img/foodanddrink.jpg" alt="test" />
+        <h2>Food and drink</h2>
+        <p>There is a café attached to the museum where you can get light lunches, soft drinks, coffee, snacks and more.</p>
+      </article>
+      <article class="goldenratio">
+        <img src="../img/shop.jpg" alt="test" />
+        <h2>Shop</h2>
+        <p>Our shop offers a range of memorabilia from the museum as well as great gifts and activity packs that allow you to continue to explore science even after you’ve left the museum.</p>
+      </article>
+    </main>
     <footer class="grid threecolumns">
       <div>
         <p class="grid">

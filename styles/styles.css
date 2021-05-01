@@ -56,25 +56,60 @@ label[for="hamburger-menu"] i {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 11;
 }
 
 #menuList {
-  position: fixed;
+  position: absolute;
   left: 0;
-  top: 15vh;
+  top: 0vh;
   width: 100%;
   background: white;
   margin: 0;
   z-index: 10;
   display: grid;
-  gap: 20px;
-  text-align: center;
+  gap: 30px;
+  text-align: left;
   margin: 0;
-  padding: 40px 0;
+  padding: 60px 0;
 }
 
 #menuList li {
   list-style-type: none;
+  padding-left: 50px;
+}
+
+#menuList li:before {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 30px;
+  background: #517ab0;
+  border-radius: 20px;
+  margin-right: 10px;
+  transform: translateY(10px);
+}
+
+#menuList form {
+  padding-left: 50px;
+  margin-top: 20px;
+}
+
+#menuList form input[type="text"],
+#menuList form button {
+  border: none;
+  outline: 2px solid #517ab0;
+  padding: 4px 5px;
+}
+#menuList form button {
+  background: #517ab0;
+  color: white;
+}
+
+#menuList img {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #menuList li a:visited,
@@ -145,4 +180,24 @@ footer.threecolumns {
   text-align: center;
   margin-top: 15vh;
   padding-bottom: 5vh;
+}
+.goldenratio h2 {
+  grid-area: title;
+}
+.goldenratio img {
+  grid-area: image;
+  max-width: 80%;
+  align-self: center;
+}
+
+.goldenratio p {
+  grid-area: text;
+}
+.goldenratio {
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "image text"
+    "image text";
+  padding: 20px;
 }
