@@ -12,6 +12,14 @@ body {
   display: grid;
 }
 
+article.grid {
+  padding: 20px;
+}
+
+.grid img {
+  width: 100%;
+}
+
 nav div {
   padding: 35px 0;
 }
@@ -123,9 +131,12 @@ main .withcircle {
   overflow: hidden;
 }
 
+main > h1 {
+  text-align: center;
+}
+
 .withcircle img {
   width: 100%;
-  height: 250px;
 }
 
 .withcircle .circletext {
@@ -156,7 +167,7 @@ section.gallery {
   grid-template-rows: 1fr 1fr;
   justify-items: center;
   margin-top: 20px;
-  row-gap: 20px;
+  row-gap: 10px;
 }
 
 section.gallery .card {
@@ -200,4 +211,54 @@ footer.threecolumns {
     "image text"
     "image text";
   padding: 20px;
+}
+.goldenratio.mobileDifferent {
+  grid-template-areas: none;
+}
+.goldenratio.mobileDifferent img,
+.goldenratio.mobileDifferent h2 {
+  grid-area: auto;
+}
+
+.infoToExpand {
+  display: block;
+  animation: fadeIn linear forwards 0.3s;
+  position: relative;
+  text-align: center;
+  top: -5vh;
+}
+
+.expandInfo:not(:checked) ~ .infoToExpand,
+.expandInfo {
+  display: none;
+}
+
+.infoToExpand,
+.card label span {
+  background: #517ab0;
+  padding: 7px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+div.circletext p {
+  margin-top: 0;
+  font-size: 0.8rem;
+  display: grid;
+  transform: translateY(-50px);
+}
+div.circletext h2 {
+  margin-bottom: 0;
+  margin-top: 5vh;
 }
