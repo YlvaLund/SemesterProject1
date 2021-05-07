@@ -669,7 +669,7 @@ div.circletext h2 {
   }
 
   .fadeIn {
-    animation: fadeIn forwards 0.5s ease-in;
+    animation: fadeIn forwards 0.3s ease-in;
   }
 
   @keyframes fadeIn {
