@@ -1,7 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
 
+:root {
+  --color-background: #fff;
+  --color-pink: #d25d8c;
+  --color-blue: #517ab0;
+  --color-orange: #f19131;
+  --color-blueAlpha: #517ab0d0;
+  --color-pinkAlpha: #d25d8cd2;
+  --color-orangeAlpha: #f19131b2;
+}
+
 body {
-  background: white;
+  background: var(--color-background);
   margin: 0;
   font-family: "Barlow", sans-serif;
   letter-spacing: 0.1rem;
@@ -30,10 +40,6 @@ nav div p {
   font-size: 0.8rem;
 }
 
-.grid {
-  display: grid;
-}
-
 .threecolumns {
   grid-template-columns: 1fr 1fr 1fr;
   display: none;
@@ -44,7 +50,7 @@ nav div p {
 }
 
 nav {
-  background: #517ab0;
+  background: var(--color-blue);
   display: grid;
   grid-template-columns: 1fr 2fr 0.5fr;
   justify-content: center;
@@ -72,7 +78,7 @@ label[for="hamburger-menu"] i {
   left: 0;
   top: 0vh;
   width: 100%;
-  background: white;
+  background: var(--color-background);
   margin: 0;
   z-index: 10;
   display: grid;
@@ -92,13 +98,13 @@ label[for="hamburger-menu"] i {
   content: "";
   width: 10px;
   height: 30px;
-  background: #517ab0;
+  background: var(--color-blue);
   border-radius: 20px;
   margin-right: 10px;
   transform: translateY(10px);
 }
 .withcircle .circletext.orange {
-  background: #f191317c;
+  background: var(--color-orangeAlpha);
 }
 #menuList form {
   padding-left: 50px;
@@ -108,12 +114,12 @@ label[for="hamburger-menu"] i {
 #menuList form input[type="text"],
 #menuList form button {
   border: none;
-  outline: 2px solid #517ab0;
+  outline: 2px solid var(--color-blue);
   padding: 4px 5px;
 }
 #menuList form button {
-  background: #517ab0;
-  color: white;
+  background: var(--color-blue);
+  color: var(--color-background);
 }
 
 #menuList img {
@@ -149,7 +155,7 @@ main > h1 {
   position: absolute;
   left: 50%;
   transform: translateY(-80%) translateX(-50%);
-  color: white;
+  color: var(--color-background);
   text-align: center;
 }
 
@@ -189,7 +195,7 @@ section.gallery .card img {
 section.gallery .card span {
   position: relative;
   top: -60px;
-  color: white;
+  color: var(--color-background);
 }
 
 footer.threecolumns {
@@ -208,15 +214,23 @@ footer.threecolumns {
 }
 
 input.pink {
-  background: #d25d8c;
+  background: var(--color-pink);
   outline: none;
   border: none;
   padding: 5px;
-  color: white;
+  color: var(--color-background);
+}
+
+h1.pink {
+  color: var(--color-pink);
 }
 
 .withcircle .circletext.flipped.pink {
-  background: #d25d8cd2;
+  background: var(--color-pinkAlpha);
+}
+
+.withcircle .circletext.flipped.blue {
+  background: var(--color-blueAlpha);
 }
 
 .goldenratio p {
@@ -257,9 +271,9 @@ input.pink {
 
 .infoToExpand,
 .card label span {
-  background: #517ab0;
+  background: var(--color-blue);
   padding: 7px;
-  color: white;
+  color: var(--color-background);
   font-size: 0.9rem;
 }
 
@@ -287,7 +301,7 @@ div.circletext h2 {
 }
 
 .withcircle.moreSpace {
-  margin: 50px 0;
+  margin: 8vh 0;
 }
 
 .withcircle.moreSpace div.circletext h2 {
@@ -331,7 +345,7 @@ div.circletext h2 {
     transform: translate(60%, -130%);
     width: 20vh;
     height: 20vh;
-    background: #d25d8cd2;
+    background: var(--color-pinkAlpha);
   }
   .withcircle .circletext.flipped.pink h2 {
     display: grid;
@@ -342,7 +356,7 @@ div.circletext h2 {
   }
 
   .circletext.orange {
-    background: #f191317c;
+    background: var(--color-orangeAlpha);
   }
 
   div.circletext p {
@@ -370,7 +384,7 @@ div.circletext h2 {
   .goldenratio {
     margin: 50px;
     box-sizing: border-box;
-    border: 5px solid #517ab0;
+    border: 5px solid var(--color-blue);
     grid-template-areas:
       "image title"
       "image text";
@@ -422,7 +436,7 @@ div.circletext h2 {
     grid-template-areas:
       "image title"
       "image text";
-    border: 5px solid #517ab0;
+    border: 5px solid var(--color-blue);
     margin: 5vh 0;
   }
 
@@ -436,14 +450,17 @@ div.circletext h2 {
 /* Desktop */
 @media screen and (min-width: 1026px) {
   main {
-    background: url("../img/background.jpg"), url("./img/background.jpg");
-    background-position: center;
-    background-repeat: repeat-y;
     padding-bottom: 5vh;
   }
 
-  main.paddedTop {
-    padding-top: 5vh;
+  #menuList {
+    width: 40%;
+    left: 60%;
+  }
+
+  #menuList li:hover {
+    letter-spacing: 0.5rem;
+    transition: letter-spacing 0.2s ease-in-out;
   }
 
   footer {
@@ -460,7 +477,7 @@ div.circletext h2 {
 
   nav div p {
     font-size: 2rem;
-    color: white;
+    color: var(--color-background);
     margin: 20px;
   }
   .threecolumns {
@@ -509,7 +526,7 @@ div.circletext h2 {
   }
 
   .withcircle .circletext.flipped {
-    transform: translate(50%, -80%);
+    transform: translate(50%, -90%);
   }
 
   section.gallery .card span {
@@ -528,8 +545,8 @@ div.circletext h2 {
       "image title"
       "image text";
     width: 50%;
-    gap: 3vw;
     left: 25%;
+    gap: 0 2vw;
     position: relative;
     margin: 5vh 0;
   }
@@ -547,12 +564,13 @@ div.circletext h2 {
   }
 
   article.goldenratio img {
-    background: white;
     object-fit: cover;
     width: 20vw;
     height: 20vh;
-    padding: 20px;
-    border: 5px solid #517ab0;
+  }
+
+  .pagetitle {
+    margin: 6vh 0;
   }
 
   section.gallery div.card {
@@ -564,15 +582,22 @@ div.circletext h2 {
   }
 
   div.withcircle div.flipped.pink h2 {
-    position: relative;
-    top: 15%;
-    font-size: 2.4rem;
     display: grid;
-    gap: 2vh;
+    font-size: 2.5rem;
+    line-height: normal;
   }
 
-  div.withcircle div.flipped.pink p {
-    top: 40%;
+  div.withcircle div.flipped.orange p {
+    font-size: 2rem;
+    line-height: normal;
+    top: 28%;
+    transform: translateY(0);
+  }
+
+  div.withcircle .pink p {
+    position: relative;
+    top: 10%;
+    transform: translateY(0px);
   }
 
   article.goldenratio.mobileDifferent h2 {
@@ -589,9 +614,70 @@ div.circletext h2 {
 
   article.goldenratio.mobileDifferent {
     grid-template-areas: "image title" "image text";
+    padding: 30px;
+    background: var(--color-orangeAlpha);
   }
-
+  /*
   article.goldenratio.mobileDifferent:nth-of-type(odd) {
     grid-template-areas: "title image" "text image";
+    background: ;
+  }
+*/
+  /* Exhibition Spaces */
+
+  article.grid h2 {
+    grid-area: title;
+    padding: 0 30px;
+  }
+
+  article.grid p {
+    grid-area: text;
+    padding: 0 30px;
+    align-self: start;
+  }
+
+  article.grid img {
+    grid-area: image;
+    align-self: center;
+  }
+  article.grid {
+    grid-template-areas:
+      "title image"
+      "text image";
+    width: 60%;
+    position: relative;
+    left: 20%;
+  }
+
+  article.grid:nth-of-type(odd) {
+    grid-template-areas:
+      "image title"
+      "image text";
+  }
+
+  div.withcircle.moreSpace {
+    position: relative;
+    width: 80%;
+    left: 10%;
+    overflow: visible;
+  }
+
+  /* specialevents */
+  .withcircle.moreSpace div.circletext h2 {
+    font-size: 3rem;
+    line-height: normal;
+  }
+
+  .fadeIn {
+    animation: fadeIn forwards 0.5s ease-in;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
