@@ -501,7 +501,6 @@ div.circletext h2 {
   }
 
   .circletext h1 {
-    font-size: 3.5rem;
     line-height: 4rem;
     top: 40%;
     transform: translateY(-50%);
@@ -588,7 +587,6 @@ div.circletext h2 {
   }
 
   div.withcircle div.flipped.orange p {
-    font-size: 2rem;
     line-height: normal;
     top: 28%;
     transform: translateY(0);
