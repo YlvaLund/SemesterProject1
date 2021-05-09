@@ -157,6 +157,7 @@ main > h1 {
   transform: translateY(-80%) translateX(-50%);
   color: var(--color-background);
   text-align: center;
+  backdrop-filter: blur(4px);
 }
 
 .circletext h1,
