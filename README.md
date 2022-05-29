@@ -1,6 +1,6 @@
 # Museum - School project
 
-![image](https://ylvalund.com/img/rainydays.jpg)
+![image](https://ylvalund.com/img/semester.jpg)
 
 ## Description
 
